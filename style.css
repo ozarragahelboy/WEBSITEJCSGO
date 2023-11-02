@@ -16,9 +16,12 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	color: inherit;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: larger;
 }
+
+/*header*/
+
 header {
 	position: sticky;
 	top: 0;
@@ -55,6 +58,9 @@ header ul.nav li:first-child {
 header ul.nav li:last-child {
 	margin-right: 0;
 }
+header ul.nav a:hover {
+	color: #fc0404;
+}
 @media(max-width:1000px) {
 	header {
 		padding: 20px 30px;
@@ -74,6 +80,32 @@ header ul.nav li:last-child {
 		display: none;
 	}
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+ }
+  
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+ }
+  
+ .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-weight: 400;
+ } 
+ .dropdown:hover .dropdown-content {
+    display: block;
+ }
+  
+
 /*banner area*/
 
 section {
@@ -111,40 +143,25 @@ section p {
 	color: #fff;
 	text-align: center;
 }
-.banner-area .banner-img {
-	background-image: url(images/a1.jpg);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	z-index: -1;
-	background-position: center center;
-}
-.banner-area .banner-img::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: .7;
-}
 .banner-area h1 {
 	margin-bottom: 15px;
-	font-size: 65px;
+	font-size: 80px;
 	text-transform: uppercase;
 }
 .banner-area h1 span {
-	color: #fc0404;
+	background: linear-gradient(to right, red, rgb(247, 25, 118), red, rgb(247, 25, 118), red);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+	
 }
 .banner-area h3 {
 	font-size: 25px;
 	font-weight: 100;
 	text-transform: uppercase;
+}
+.banner-area h3 {
+	font-size: 30px;
+	font-weight: 400;
 }
 .banner-area a.banner-btn {
 	padding: 15px 35px;
@@ -158,13 +175,22 @@ section p {
 	.banner-area h1 {
 		font-size: 27px;
 	}
-	.banner-area h3 {
-		font-size: 20px;
-	}
 	.banner-area a.banner-btn {
 		padding: 8px 20px;
 	}
 }
+/*Chamfest area*/
+#video-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 5;
+	pointer-events: none;
+}
+
 /*about area*/
 
 ul.about-content {
@@ -233,6 +259,7 @@ ul.about-content {
 		padding: 8px;
 	}
 }
+
 /*msg area*/
 
 .msg-area {
@@ -296,6 +323,7 @@ ul.services-content {
 		padding: 0;
 	}
 }
+
 /*contact area*/
 
 ul.contact-content {
@@ -333,6 +361,7 @@ ul.contact-content {
 		padding: 0;
 	}
 }
+
 /*footer*/
 
 footer {
